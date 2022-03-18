@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/mainCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/bird_mouth_02"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topEnergyGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftEnergyGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.14"/>
+
+    <TextView
+        android:id="@+id/requiredEnergy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/topEnergyGuide"
+        app:layout_constraintStart_toEndOf="@id/leftEnergyGuide"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceHeadline3"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        tools:text="1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/cardNameGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.075"/>
+
+    <TextView
+        android:id="@+id/cardName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardNameGuide"
+        app:layout_constraintStart_toEndOf="@id/leftMarginGuide"
+        app:layout_constraintEnd_toStartOf="@id/rightMarginGuide"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/white"
+        tools:text="Soothing Song"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topStatGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"/>
+
+    <ImageView
+        android:id="@+id/attackBackground"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintTop_toTopOf="@id/topStatGuide"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/bg_bird" />
+
+    <ImageView
+        android:id="@+id/attackIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_atk"
+        app:layout_constraintStart_toStartOf="@id/attackBackground"
+        app:layout_constraintEnd_toEndOf="@id/attackBackground"
+        app:layout_constraintBottom_toBottomOf="@id/attackBackground"
+        app:layout_constraintTop_toTopOf="@id/attackBackground" />
+
+    <TextView
+        android:id="@+id/attackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/attackBackground"
+        app:layout_constraintBottom_toBottomOf="@id/attackBackground"
+        app:layout_constraintStart_toStartOf="@id/attackBackground"
+        app:layout_constraintEnd_toEndOf="@id/attackBackground"
+        tools:text="60"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:id="@+id/defenseBackground"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintTop_toBottomOf="@id/attackBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/bg_bird" />
+
+    <ImageView
+        android:id="@+id/defenseIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_def"
+        app:layout_constraintStart_toStartOf="@id/defenseBackground"
+        app:layout_constraintEnd_toEndOf="@id/defenseBackground"
+        app:layout_constraintBottom_toBottomOf="@id/defenseBackground"
+        app:layout_constraintTop_toTopOf="@id/defenseBackground" />
+
+    <TextView
+        android:id="@+id/defenseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/defenseBackground"
+        app:layout_constraintBottom_toBottomOf="@id/defenseBackground"
+        app:layout_constraintStart_toStartOf="@id/defenseBackground"
+        app:layout_constraintEnd_toEndOf="@id/defenseBackground"
+        tools:text="0"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:id="@+id/effectIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/sleep"
+        app:layout_constraintStart_toStartOf="@id/mainCard"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@id/topDescriptionGuide"
+        app:layout_constraintBottom_toBottomOf="@id/bottomDescriptionGuide"/>
+
+    <TextView
+        android:id="@+id/cardDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/topDescriptionGuide"
+        app:layout_constraintBottom_toBottomOf="@id/bottomDescriptionGuide"
+        app:layout_constraintStart_toEndOf="@id/leftMarginGuide"
+        app:layout_constraintEnd_toStartOf="@id/rightMarginGuide"
+        android:textColor="@color/white"
+        tools:text="Ignore shield. Apply sleep to target."/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topDescriptionGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.68"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomDescriptionGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftMarginGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.22"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightMarginGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/mainCard"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
